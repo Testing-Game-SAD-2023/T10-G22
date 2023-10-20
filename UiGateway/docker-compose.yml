@@ -1,0 +1,13 @@
+version: '3.12.12'
+
+services:
+  gateway:
+    build: .
+    ports:
+      - "8083:8083"
+    networks:
+      - global-network
+      
+networks:
+  global-network:
+    external: true
