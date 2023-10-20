@@ -1,0 +1,29 @@
+server:
+  error:
+    include-message: always
+  port: 90
+
+spring:
+  mvc:
+    view:
+      prefix: /static/
+      suffix: .html
+      
+  data:
+    mongodb:
+      auto-index-creation: true
+      authentication-database: admin
+      username: root
+      password: verysad
+      database : manvsclass
+      port: 27017
+      host: t1_mongo
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
