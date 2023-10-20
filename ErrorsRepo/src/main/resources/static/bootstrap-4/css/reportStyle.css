@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+.big-container{ /*Container pagina*/
+    background-color: #1c1c28;
+    min-height: 100vh;
+}
