@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+    <link th:href="@{./css/main.css}" rel="stylesheet" />
+    <link th:href="@{./css/main2.css}" rel="stylesheet" />
+    <link th:href="@{./bootstrap-4/css/bootstrap.min.css}" rel="stylesheet" />
+    <script th:src="@{./js/main.js}">
+    </script>
+    <title>Choose your enemy</title>
+</head>
+
+<body class=bg-custom>
+    <!-- inclusione jquery-->
+    <script th:src="@{./jquery/jquery-3.7.0.com.js}"  th:inline="javascript">
+    </script>
+  <!-- <div class="mt-2 row">  <p class ="user_position_report" style="color: white; font-family:Arial, Helvetica, sans-serif; font-weight: bold;">Username: <span id="usernameField" th:each="element: ${mail}" th:text=${element}></span></p>
+  </div> -->
+<div class="container">
+
+    <div class="report_cont">
+      <!-- Contenuto riga 1 -->
+      <div class="titolo">
+        <span class="v5_2096_report">HERE IS YOUR SELECTION</span>
+        <div class="image-report">
+            <img src="./images/George_line.png" alt="Linea colorata curva" style="width: 377px; height: 32px;">
+          </div>
+        <div class="class_test">
+          <span class="lab_r1"> CLASS TO TEST<p class="custom-p1" style="display: inline-block;" th:text=${classe} id="classe_id"></p></span>
+          <!-- <div class="divisore">
+              <span class="div_blanco"></span>
+              style="width: 377px; height: 32px;"
+          </div> -->
+        </div>
+      </div>
+      <div class="robot_test">
+        <span class="lab_r"> ROBOT TO FIGHT <p class="custom-p2" style="display: inline-block;" th:text=${robot} id="robot_id"></p></span>
+      </div>
+    </div><!-- Fine Contenuto riga 1 -->
+  
+    <div class="div_buttons">
+        <div class="div_back">
+          <button type="button" class="btn custom-button" th:onclick="redirectToPagemain()">Go back</button>
+          <button type="button" class="btn custom-button" th:onclick="redirectToPageeditor()">Submit</button>
+      </div>
+  </div>
+  <script>
+  // Recupera le variabili dalla memoria locale
+  var username = localStorage.getItem("username");
+
+  // Utilizza le variabili come desiderato nella pagina successiva
+  console.log("Username:", username);
+  // Puoi anche utilizzare le variabili per modificare il contenuto HTML
+  document.getElementById("usernameField").innerText = username;
+</script>
+</body>
+</html>
